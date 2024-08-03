@@ -15,6 +15,32 @@ Return <code>true</code> if you can make <code>arr</code> equal to <code>target 
 
 * [Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target)
 
+# Solution Python3
+
+```python3
+class Solution:
+    def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
+        return Counter(target) == Counter(arr)
+```
+
+# Solution Java
+
+Runtime
+1 ms | Beats 100.00%
+
+
+```java
+class Solution {
+    public boolean canBeEqual(int[] target, int[] arr) {
+        int count[] = new int[1001];
+        for (int x : arr) count[x]++;
+        for (int x : target) count[x]--;
+        for (int x : count)
+            if (x != 0) return false;
+        return true;
+    }
+}
+```
 
 # Solution C++
 
@@ -41,23 +67,4 @@ public:
         return true;
     }
 };
-```
-
-# Solution Java
-
-Runtime
-1 ms | Beats 100.00%
-
-
-```java
-class Solution {
-    public boolean canBeEqual(int[] target, int[] arr) {
-        int count[] = new int[1001];
-        for (int x : arr) count[x]++;
-        for (int x : target) count[x]--;
-        for (int x : count)
-            if (x != 0) return false;
-        return true;
-    }
-}
 ```
