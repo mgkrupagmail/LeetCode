@@ -45,6 +45,10 @@ public:
 
 # Solution Java
 
+Runtime
+1 ms | Beats 100.00%
+
+
 ```java
 class Solution {
     public boolean canBeEqual(int[] target, int[] arr) {
