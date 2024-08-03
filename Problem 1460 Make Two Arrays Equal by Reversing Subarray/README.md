@@ -18,6 +18,8 @@ Return <code>true</code> if you can make <code>arr</code> equal to <code>target 
 
 # Solution C++
 
+LeetCode Playground Code here: https://leetcode.com/playground/KR8kwTTv
+
 ```cpp
 // Space: O(1)  - count array has length 1001.
 //              - Using a vector<int> of length arr.length would save a little memory but
